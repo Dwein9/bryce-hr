@@ -4,8 +4,13 @@ $(document).ready(function(){
 
   $.ajax({
     url: `${URL}`,
-    success: function(data) {
-      console.log(data)
+    success: function (html) {
+
+    const table =  $(html).find('table')[4].children[3].innerHTML.split('\n')
+    var bryce = table[table.length-3].split('data-stat=')[16].split('>')[1][0]
+
+    console.log(bryce);
     }
+
   })
 })
