@@ -1,5 +1,10 @@
 {
+  "name": "bryce-hr",
+  "description": "Bryce Harper home run check",
+  "version": "1.0",
+  "author": "David Weinstein",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
   }
 }
