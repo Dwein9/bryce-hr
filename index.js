@@ -8,7 +8,7 @@ function getHomeRuns() {
 }
 
 function homerCheck() {
-  const URL = 'http://www.baseball-reference.com/players/gl.fcgi?id=harpebr03&t=b&year=2017'
+  const URL = 'https://crossorigin.me/http://www.baseball-reference.com/players/gl.fcgi?id=harpebr03&t=b&year=2017'
 
   $.ajax({
     url: `${URL}`,
