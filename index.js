@@ -27,11 +27,13 @@ function render(data) {
   let $answer = $('#answer')
 
   var verbs = ['hit', 'crushed', 'swatted', 'poked', 'blasted']
+  var homer = ['homer', 'home run', 'dinger']
   var homers = ['homers', 'home runs', 'dingers']
   var number = ['zero', 'one', 'two', 'three', 'four', 'five']
 
-
-  if (data > 0) {
+  if (data == 1) {
+    var response = `Bryce Harper ${verbs[Math.floor(Math.random()*verbs.length)]} ${number[data]} ${homer[Math.floor(Math.random()*homers.length)]} in his last game.`
+  } else if (data > 1) {
     var response = `Bryce Harper ${verbs[Math.floor(Math.random()*verbs.length)]} ${number[data]} ${homers[Math.floor(Math.random()*homers.length)]} in his last game.`
   } else {
     var response = "Sadly, no."
