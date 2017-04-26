@@ -8,7 +8,7 @@ function getHomeRuns() {
 }
 
 function homerCheck() {
-  const URL = 'http://www.baseball-reference.com/players/gl.fcgi?id=harpebr03&t=b&year=2017'
+  const URL = 'https://crossorigin.me/http://www.baseball-reference.com/players/gl.fcgi?id=harpebr03&t=b&year=2017'
 
   $.ajax({
     url: `${URL}`,
@@ -26,10 +26,15 @@ function homerCheck() {
 function render(data) {
   let $answer = $('#answer')
 
+  var verbs = ['hit', 'crushed', 'swatted', 'poked', 'blasted']
+  var homers = ['homers', 'home runs', 'dingers']
+  var number = ['zero', 'one', 'two', 'three', 'four', 'five']
+
+
   if (data > 0) {
-    var response = "Yes"
+    var response = `Bryce Harper ${verbs[Math.floor(Math.random()*verbs.length)]} ${number[data]} ${homers[Math.floor(Math.random()*homers.length)]} in his last game.`
   } else {
-    var response = "No"
+    var response = "Sadly, no."
   }
 
   $answer.append(`<h1 class="response">${response}</h1>`)
